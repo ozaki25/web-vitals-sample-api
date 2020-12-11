@@ -66,11 +66,19 @@ const serverlessConfiguration: AWS = {
               AttributeName: 'name',
               AttributeType: 'S',
             },
+            {
+              AttributeName: 'id',
+              AttributeType: 'S',
+            },
           ],
           KeySchema: [
             {
               AttributeName: 'name',
               KeyType: 'HASH',
+            },
+            {
+              AttributeName: 'id',
+              KeyType: 'RANGE',
             },
           ],
           ProvisionedThroughput: {
