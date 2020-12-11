@@ -43,13 +43,31 @@ const serverlessConfiguration: AWS = {
     ],
   },
   functions: {
-    analytics: {
-      handler: 'handler.analytics',
+    createAnalytics: {
+      handler: 'handler.creeateAnalytics',
       events: [
         {
           http: {
             method: 'post',
             path: 'analytics',
+          },
+        },
+      ],
+    },
+    getAnalytics: {
+      handler: 'handler.getAnalytics',
+      events: [
+        {
+          http: {
+            method: 'get',
+            path: 'analytics',
+            request: {
+              parameters: {
+                querystrings: {
+                  name: false,
+                },
+              },
+            },
           },
         },
       ],
