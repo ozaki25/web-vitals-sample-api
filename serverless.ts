@@ -24,13 +24,13 @@ const serverlessConfiguration: AWS = {
     },
   },
   functions: {
-    hello: {
-      handler: 'handler.hello',
+    analytics: {
+      handler: 'handler.analytics',
       events: [
         {
           http: {
-            method: 'get',
-            path: 'hello',
+            method: 'post',
+            path: 'analytics',
           },
         },
       ],
