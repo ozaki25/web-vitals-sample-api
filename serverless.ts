@@ -44,7 +44,7 @@ const serverlessConfiguration: AWS = {
   },
   functions: {
     createAnalytics: {
-      handler: 'handler.creeateAnalytics',
+      handler: 'handler.createAnalytics',
       events: [
         {
           http: {
